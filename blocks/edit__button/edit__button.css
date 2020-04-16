@@ -1,0 +1,25 @@
+.edit__button {
+    
+width: 38px;
+height: 18px;
+left: 187px;
+top: 180px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+color: #FFFFFF;
+text-align: center;
+border: 1px solid #FFFFFF;
+padding: 0px;
+}
+
+.edit__button:hover {
+background-color: #FFFFFF;
+color: black;
+}

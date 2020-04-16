@@ -1,0 +1,29 @@
+.popup__error_name {
+  
+  width: 190px;
+  height: 11px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  }
+  
+  .popup__error.active {
+    padding: 0.3em;
+  }
+
+ .popup__error_job {
+  width: 190px;
+  height: 11px;
+  position: relative;
+  
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  
+  color: #FF0000;
+ }
