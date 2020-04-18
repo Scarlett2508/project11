@@ -1,0 +1,25 @@
+{
+  "name": "project11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scarlett2508/project11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scarlett2508/project11/issues"
+  },
+  "homepage": "https://github.com/Scarlett2508/project11#readme",
+  "dependencies": {
+    "jquery": "^3.5.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1"
+  }
+}
