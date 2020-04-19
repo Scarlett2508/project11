@@ -1,16 +1,16 @@
 {
   "name": "project11",
   "version": "1.0.0",
-  "description": "",
+  "description": "webpack and modules",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Scarlett2508/project11.git"
   },
-  "author": "",
+  "author": "Alevtina",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Scarlett2508/project11/issues"
@@ -20,6 +20,7 @@
     "jquery": "^3.5.0"
   },
   "devDependencies": {
-    "webpack": "^4.42.1"
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
