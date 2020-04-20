@@ -2,9 +2,10 @@
   "name": "project11",
   "version": "1.0.0",
   "description": "webpack and modules",
-  "main": "script.js",
+  "main": "./script.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
