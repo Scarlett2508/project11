@@ -1,8 +1,38 @@
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
+
 module.exports = {
-    entry: { main: './src/script.js' }
+    entry: { main: './src/script.js' },
     output: {
-        path: './dist/',
-        filename: 'main.js'
-    }
-}
-// указали первое место куда заглянет webpack — файл index.js в папке src
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[chunkhash].js'
+    },
+    module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: "babel-loader"
+            }
+          },
+      {
+            test: /\.css$/,
+            use:  [MiniCssExtractPlugin.loader, 'css-loader']
+           }
+        ]
+      },
+      plugins: [ 
+        new MiniCssExtractPlugin({
+            filename: 'style.[contenthash].css'
+        }),
+        new HtmlWebpackPlugin({
+          inject: false,
+          template: './src/index.html',
+          filename: 'index.html'
+        }),
+        new WebpackMd5Hash()
+      ]
+    };

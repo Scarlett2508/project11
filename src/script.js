@@ -1,3 +1,26 @@
+// import {Api} from './Api.js'
+// import {Card} from './Card.js'
+// import {CardList} from './CardList.js'
+// import {ErrorHandler} from './ErrorHandler.js'
+// import {FormValidator} from './FormValidator.js'
+// import {initialCards} from './initialCards.js'
+// import {Popup} from './Popup.js'
+// import {PopupImage} from './PopupImage.js'
+// import {PopupPlace} from './PopupPlace.js'
+// import {PopupProfile} from './PopupProfile.js'
+// import {userInfo} from './UserInfo.js'
+// import "./pages/index.css"
+//  import "./vendor/fonts.css"
+
+// console.log(Api);
+// console.log(Card);
+// console.log(CardList);
+// console.log(ErrorHandler);
+// console.log(FormValidator);
+// console.log(initialCards);
+// console.log(PopupImage);
+
+
 const api = new Api('https://praktikum.tk/', 'cohort9', '3deb33ce-b5f1-474c-aed8-a353bcbe5719');
 const errorElem = document.querySelector('.error-text');
 const errHandler = new ErrorHandler(errorElem);
@@ -58,25 +81,5 @@ const formValidator = new FormValidator(document.querySelector(".popup__picture-
 formValidator.setEventListeners();
 
 
-import {Api} from './Api.js'
-import {Card} from './Card.js'
-import {CardList} from './CardList.js'
-import {ErrorHandler} from './ErrorHandler.js'
-import {FormValidator} from './FormValidator.js'
-import {initialCards} from './initialCards.js'
-import {Popup} from './Popup.js'
-import {PopupImage} from './PopupImage.js'
-import {PopupPlace} from './PopupPlace.js'
-import {PopupProfile} from './PopupProfile.js'
-import {userInfo} from './UserInfo.js'
-import "./pages/index.css"
-import "./vendor/fonts.css"
 
-console.log(Api);
-console.log(Card);
-console.log(CardList);
-console.log(ErrorHandler);
-console.log(FormValidator);
-console.log(initialCards);
-console.log(PopupImage);
 
