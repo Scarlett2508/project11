@@ -60,16 +60,3 @@ export class Api {
 
 
 
-
-  // deleteCard(id) {
-  //   return fetch(`${this.baseUrl}/cards/${id}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       authorization: this.token
-  //     }
-  //   })
-  //     .then(res => this.parseResponce(res))
-  //     .catch(err => {
-  //       throw err;
-  //     });
-  // }

@@ -1,3 +1,5 @@
+import {api} from './script.js'
+
 export class Popup {
     constructor(element) {
         this.element = element;

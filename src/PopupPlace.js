@@ -1,3 +1,4 @@
+import {Popup} from './Popup.js'
 export class PopupPlace extends Popup {
   constructor(element, cardList, makeCard) {
     super(element)
