@@ -4,9 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
-
+const webpack = require('webpack');
 
 module.exports = {
+  // entry: { main: './src/empty.js' },
     entry: { main: './src/script.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -21,21 +22,14 @@ module.exports = {
               loader: "babel-loader"
             }
           },
-      {
-            test: /\.css$/,
-            use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
-           },
+      
            {
             test: /\.(eot|ttf|woff|woff2)$/,
             loader: 'file-loader?name=./vendor/[name].[ext]'
         },
         {
             test: /\.css$/i,
-            use: [
-                            (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                            'css-loader', 
-                            'postcss-loader'
-                    ]
+            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),'css-loader', 'postcss-loader']
     },
     {
         test: /\.(gif|png|jpe?g|ico|svg)$/i,
@@ -54,7 +48,7 @@ module.exports = {
       },
       plugins: [ 
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: 'index.[contenthash].css',
         }),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -64,9 +58,7 @@ module.exports = {
           template: './src/index.html',
           filename: 'index.html'
         }),
-        new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
-    }),
+        
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
@@ -74,7 +66,9 @@ module.exports = {
                     preset: ['default'],
             },
             canPrint: true
-    }), // подключите плагин после MiniCssExtractPlugin
-        new WebpackMd5Hash()
-      ]
+    }), 
+        new WebpackMd5Hash(),
+        new webpack.SourceMapDevToolPlugin({}),
+      ],
+      devtool: false,
     };
