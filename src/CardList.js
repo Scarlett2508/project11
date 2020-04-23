@@ -1,3 +1,4 @@
+
 export class CardList {
   constructor(element, createCard, api, errHandler, userInfo) {
     this.createCard = createCard;
@@ -23,28 +24,6 @@ export class CardList {
       .catch(err => {
         alert(err + ' Запрос не выполнен.');
       });
-    // добавляет обработчик кликов
-    // this.setRemoveHandler();
   }
-  // setRemoveHandler() {
-  //   this.elem.addEventListener('click', this.removeCard.bind(this));
-  // }
-  // removeCard(event) {
-  //   if (!event.target.classList.contains('popup__close')) {
-  //     return;
-  //   }
-  //   const cardElem = event.target.closest('.card');
-  //   const id = cardElem.dataset.id;
-  //   console.log('remove card, id:', id);
-  //   this.api
-  //     .deleteCard(id)
-  //     .then(res => {
-  //       console.log(res);
-  //       const card = this.elem.querySelector(`[data-id="${id}"]`); // DOM-элемент
-  //       card.remove();
-  //     })
-  //     .catch(err => {
-  //       this.errHandler.showError(err);
-  //     });
-  // }
+
 }

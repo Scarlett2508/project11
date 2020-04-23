@@ -51,7 +51,8 @@ module.exports = {
             filename: 'index.[contenthash].css',
         }),
         new webpack.DefinePlugin({
-            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'API_URL' : JSON.stringify(isDev ? 'http://praktikum.tk' : 'https://praktikum.tk')
         }),
         new HtmlWebpackPlugin({
           inject: false,
