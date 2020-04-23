@@ -13,7 +13,7 @@ import {UserInfo} from './UserInfo.js'
 
 
 
-export const api = new Api('https://praktikum.tk/', 'cohort9', '3deb33ce-b5f1-474c-aed8-a353bcbe5719');
+export const api = new Api('http://praktikum.tk/', 'cohort9', '3deb33ce-b5f1-474c-aed8-a353bcbe5719');
 const errorElem = document.querySelector('.error-text');
 const errHandler = new ErrorHandler(errorElem);
 
