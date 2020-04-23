@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const webpack = require('webpack');
 
 module.exports = {
-  // entry: { main: './src/empty.js' },
+  
     entry: { main: './src/script.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
