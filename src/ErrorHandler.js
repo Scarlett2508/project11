@@ -1,4 +1,4 @@
-class ErrorHandler {
+export class ErrorHandler {
     constructor(elem) {
       this.elem = elem;
     }

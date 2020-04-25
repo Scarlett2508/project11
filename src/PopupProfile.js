@@ -1,4 +1,9 @@
-class PopupProfile extends Popup {
+import {Popup} from './Popup.js'
+// // import * as api from './Api.js'
+// import {Api as api} from './Api.js'
+import {api} from './script.js'
+
+export class PopupProfile extends Popup {
   constructor(element, userInfo) {
     super(element)
     this.userName = null;
@@ -13,8 +18,6 @@ class PopupProfile extends Popup {
     this.userName = document.forms.edit.who;
 
     this.jobName = document.forms.edit.description;
-    // Можно лучше
-    // const { name, job } = this.userInfo.returnUserInfo();
     this.userName.value = this.userInfo.returnUserInfo().name;
     this.jobName.value = this.userInfo.returnUserInfo().job;
   }

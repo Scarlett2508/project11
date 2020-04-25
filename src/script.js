@@ -1,4 +1,19 @@
-const api = new Api('https://praktikum.tk/', 'cohort9', '3deb33ce-b5f1-474c-aed8-a353bcbe5719');
+import './pages/index.css'
+
+import {Api} from './Api.js'
+import {Card} from './Card.js'
+import {CardList} from './CardList.js'
+import {ErrorHandler} from './ErrorHandler.js'
+import {FormValidator} from './FormValidator.js'
+import {PopupImage} from './PopupImage.js'
+import {PopupPlace} from './PopupPlace.js'
+import {PopupProfile} from './PopupProfile.js'
+import {UserInfo} from './UserInfo.js'
+
+
+
+
+export const api = new Api(API_URL, 'cohort9', '3deb33ce-b5f1-474c-aed8-a353bcbe5719');
 const errorElem = document.querySelector('.error-text');
 const errHandler = new ErrorHandler(errorElem);
 
@@ -56,6 +71,7 @@ popupButtonEdit.addEventListener('click', popupForEdit.submit);
 
 const formValidator = new FormValidator(document.querySelector(".popup__picture-form"));
 formValidator.setEventListeners();
+
 
 
 

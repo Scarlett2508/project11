@@ -1,4 +1,4 @@
-class FormValidator {
+export class FormValidator {
   checkInputValidity(element) {
     const errorElement = element.nextElementSibling;
     if (element.validity.valueMissing) {

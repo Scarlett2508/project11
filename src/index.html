@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default %>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -25,24 +25,10 @@
     </div>
     <div class="places-list root__section">
 
-      <!--
-
-      <div class="place-card">
-        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
-          <button class="place-card__delete-icon"></button>
-        </div>
-        <div class="place-card__description">
-          <h3 class="place-card__name">Камчатка</h3>
-          <button class="place-card__like-icon"></button>
-        </div>
-      </div>
-
-      -->
-
     </div>
     <div class="popup popup__picture">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default %>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form popup__picture-form" name="new" id="justPic">
 
@@ -57,7 +43,7 @@
     </div>
     <div class="popup popup__edit">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default %>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form popup__profile-form" name="edit" id="justEdit">
             <input type="text" minlength = "2"  autofocus="autofocus" name="who" class="popup__input popup__input_user_name" placeholder="Имя" min="2" max="30" required>
@@ -72,7 +58,7 @@
 
     <div class="popup" id="zoom-image">
       <div class="popup__image-content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default %>" alt="" class="popup__close">
         <img src="" alt="" class="popup__image">
       </div>
     </div>
@@ -93,22 +79,7 @@
 
   <div class="error-text"></div>
 
-
-  <script src="./Api.js"></script>
-  <script src="./ErrorHandler.js"></script>
-  
-  
-  <script src="./FormValidator.js"></script>
-  <script src="./Card.js"></script>
-  <script src="./CardList.js"></script>
-  <script src="./Popup.js"></script>
-  <script src="./PopupPlace.js"></script>
-  <script src="./PopupImage.js"></script>
-  <script src="./PopupProfile.js"></script>
-  <script src="./UserInfo.js"></script>
-
-
-  <script src="./script.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
 </body>
 </html>

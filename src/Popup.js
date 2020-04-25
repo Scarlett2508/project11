@@ -1,4 +1,6 @@
-class Popup {
+import {api} from './script.js'
+
+export class Popup {
     constructor(element) {
         this.element = element;
         this.close = this.close.bind(this);

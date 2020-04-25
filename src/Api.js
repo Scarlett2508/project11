@@ -1,6 +1,6 @@
-class Api {
+export class Api {
   constructor(baseUrl, groupId, token) {
-    this.baseUrl = `${baseUrl}${groupId}`;
+    this.baseUrl = `${baseUrl}/${groupId}`;
 
     this.token = token;
   }
@@ -60,16 +60,3 @@ class Api {
 
 
 
-
-  // deleteCard(id) {
-  //   return fetch(`${this.baseUrl}/cards/${id}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       authorization: this.token
-  //     }
-  //   })
-  //     .then(res => this.parseResponce(res))
-  //     .catch(err => {
-  //       throw err;
-  //     });
-  // }

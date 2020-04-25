@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
   constructor(elem, api, errHandler) {
     this.elem = elem;
     this.api = api;
